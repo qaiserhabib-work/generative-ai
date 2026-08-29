@@ -1,0 +1,11 @@
+Data Science
+
+Data science is a field that combines statistics, mathematics, programming, and domain knowledge to understand data and solve real-world problems. It helps organizations turn large amounts of raw data into useful information that can support better decisions.
+
+A data scientist usually starts by collecting data from different sources, such as databases, websites, applications, sensors, or surveys. The data is then cleaned and prepared because real-world datasets often contain missing values, duplicate records, and incorrect information. After preparing the data, scientists explore it using statistical methods and visualization techniques to discover patterns, trends, and relationships.
+
+Machine learning is an important part of data science. Algorithms can be trained on historical data to make predictions or classify new information. For example, a company can use machine learning to predict customer behavior, detect fraud, recommend products, or estimate future sales.
+
+Popular tools used in data science include Python, pandas, NumPy, Matplotlib, scikit-learn, SQL, and Jupyter Notebook. More advanced projects may also use deep learning frameworks such as TensorFlow or PyTorch.
+
+Data science is widely used in healthcare, finance, marketing, education, transportation, and technology. As organizations continue generating more data, the ability to analyze and understand that data has become increasingly valuable. Ultimately, data science helps transform information into insights, predictions, and practical solutions.
