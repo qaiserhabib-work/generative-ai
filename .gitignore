@@ -9,6 +9,7 @@ pythonenv*/
 
 # Vector Database & ChromaDB storage
 chroma-db/
+**/chroma-db/
 chromadb/
 .chroma/
 *.chroma
@@ -17,8 +18,7 @@ chromadb/
 *.sqlite3
 
 # Document loaders & large media/data files
-documents-loaders/*.pdf
-documents-loaders/wren_and_martin.pdf
+**/documents-loaders/*.pdf
 *.pdf
 *.bin
 *.pkl

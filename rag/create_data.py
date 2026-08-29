@@ -1,17 +1,18 @@
-# load pdf
-# split into chunks
-# create embeddings
-# store into chromadb
+import os
+from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_mistralai import MistralAIEmbeddings
 from langchain_community.vectorstores import Chroma
-from dotenv import load_dotenv
 
 load_dotenv()
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+pdf_path = os.path.join(BASE_DIR, "documents-loaders", "wren_and_martin.pdf")
+chroma_dir = os.path.join(BASE_DIR, "chroma-db")
+
 # load pdf document
-data = PyPDFLoader("documents-loaders/wren_and_martin.pdf")
+data = PyPDFLoader(pdf_path)
 docs = data.load()
 
 # create a chunk from pdf
@@ -22,7 +23,7 @@ chunks = splitter.split_documents(docs)
 embeddings_model = MistralAIEmbeddings(model="mistral-embed")
 
 vector_store = Chroma.from_documents(
-    documents= chunks,
-    embedding= embeddings_model,
-    persist_directory = "chroma-db"
+    documents=chunks,
+    embedding=embeddings_model,
+    persist_directory=chroma_dir
 )
