@@ -7,6 +7,24 @@ env.bak/
 venv.bak/
 pythonenv*/
 
+# Vector Database & ChromaDB storage
+chroma-db/
+chromadb/
+.chroma/
+*.chroma
+*.db
+*.sqlite
+*.sqlite3
+
+# Document loaders & large media/data files
+documents-loaders/*.pdf
+documents-loaders/wren_and_martin.pdf
+*.pdf
+*.bin
+*.pkl
+*.pickle
+*.parquet
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -71,20 +89,24 @@ ipython_config.py
 .dmypy.json
 dmypy.json
 
-# Environment variables
+# Environment variables & secrets
 .env
 .env.local
 .env.*.local
+*.key
+*.pem
 
-# IDEs and Editors
+# IDEs, Editors & local tool configs
 .vscode/
 .idea/
 *.swp
 *.swo
+pyrefly.toml
 
 # OS generated files
 .DS_Store
 .DS_Store?
+**/.DS_Store
 ._*
 .Spotlight-V100
 .Trashes
